@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>AGE CALCULATOR</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<link rel="stylesheet" href="index.css">
+		<script src="https://kit.fontawesome.com/fb00e9b9b1.js" crossorigin="anonymous"></script>
+	</head>
+	<body bgcolor="lightblue">
+	
+		<nav>
+			<input type="checkbox" id="check">
+			<label for="check" class="checkbtn">
+			<i class="fas fa-bars"></i>
+	
+			</label>
+			<label class="logo">Welcome!!</label>
+				<ul>
+					<li><a class="active" href="#">Home</a></li>
+					<li><a href="contact.html">Contact us</a></li>
+					
+					<li><a href="ritik.html">About</a></li>
+				</ul>
+		</nav>
+		
+	</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+ <!-- code copy rights is reserved-->
+ <!---Code By Waseem-------------->
+ <!-------Happy Coding :)----->
+ <meta charset="utf-8"/>
+ 
+ 
+ 
+ <link rel="stylesheet" href="age.css" type="text/css"/>
+ 
+<link rel="stylesheet" href="css/bootstrap.min.css">
+
+
+<script src="js/jquery.min.js"></script>
+
+
+<script src="js/bootstrap.min.js"></script>
+ <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+ <title></title>
+ <style>
+ 
+ </style>
+ <link rel="stylesheet" href="age.css" type="text/css"/>
+</head>
+<body bgcolor="#59596D">
+<div class="container-fluid bbg">
+ <div class="main-container container">
+ 
+  <div class="head">
+  <h1 class="main-heading">Age Calculator</h1>
+  </div>
+  <div class="sub-container">
+  <div class="inner">
+  <div class="dateofbirth">
+  <span id="dob" >Date of Birth </span>
+  <input type="date" id="dateStart"/></br>
+  </div>
+  <div class="todaydate">
+  <span id="db">Age at the Date</span>
+  <input type="date" id="dateEnd"/>
+  </div>
+  
+  <input type="button" id="btn" value="Calculate Age" />
+  </div>
+  </div>
+ <div class="container-fluid second">
+  <div class="row">
+    <div class="col-md">
+ <div class="contain" id="year">
+  <h1 class="heading1" id="showYears">0</h1>
+  <h3 class="heading2">Years</h3>
+ </div>
+ </div>
+    <div class="col-md">
+ <div class="contain" id="month">
+  <h1 class="heading1" id="showMonths">0</h1>
+  <h3 class="heading2">Months</h3>
+ </div>
+ </div>
+    <div class="col-md">
+ <div class="contain" id="days">
+  <h1 class="heading1" id="showDays">0</h1>
+  <h3 class="heading2">Days</h3>
+ </div>
+ </div>
+     </div>
+   
+</div>
+</div>
+ </div>
+
+</div>
+ 
+ <script>
+     var showYears=document.getElementById('showYears');
+  var showMonths=document.getElementById('showMonths');
+  var showDays=document.getElementById('showDays');
+  var button=document.getElementById('btn');
+  btn.onclick=function(){
+  var dateStart=document.getElementById('dateStart').value;
+  var dateEnd=document.getElementById('dateEnd').value;
+     var dateStarting=new Date(dateStart);
+  var dateEnding=new Date(dateEnd);
+  var diff=dateEnding-dateStarting;
+  var years=Math.floor(diff/(365.25*24*60*60*1000));
+  var remaining=Math.floor(diff%(365.25*24*60*60*1000));
+  var months=Math.floor(remaining/((365.25/12)*24*60*60*1000));
+  var remaining=Math.floor(remaining%((365.25/12)*24*60*60*1000));
+  var days=Math.floor(remaining/(24*60*60*1000));
+  showYears.innerHTML=years;
+  showMonths.innerHTML=months;
+  showDays.innerHTML=days;
+  
+  
+  
+  }
+ </script>
+</body>
+</html>
